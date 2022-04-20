@@ -20,11 +20,11 @@ public class LoginTest extends BaseTest {
     public void userShouldLoginSuccessfullyWithValidCredentials() {
         //find username element & send values
         WebElement userName = driver.findElement(By.name("username"));
-        userName.sendKeys("Harsha11");
+        userName.sendKeys("Sweety");
 
         //find password element & send values
         WebElement password = driver.findElement(By.name("password"));
-        password.sendKeys("harsha@2");
+        password.sendKeys("sweety@2");
 
         //find login button & click on it
         WebElement loginButton = driver.findElement(By.xpath("//input[@value='Log In']"));
@@ -43,19 +43,14 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void verifyTheErrorMessage() {
-        //reset the database
-        WebElement adminPage=driver.findElement(By.linkText("Admin Page"));
-        adminPage.click();
-        WebElement resetButton=driver.findElement(By.xpath("//button[contains(text(),'Clean')]"));
-        resetButton.click();
 
         //find username element & send values
         WebElement userName = driver.findElement(By.name("username"));
-        userName.sendKeys("___");
+        userName.sendKeys("hello");
 
         //find password element & send values
         WebElement password = driver.findElement(By.name("password"));
-        password.sendKeys("___");
+        password.sendKeys("hello");
 
         //find login button & click on it
         WebElement loginButton = driver.findElement(By.xpath("//input[@value='Log In']"));
@@ -76,11 +71,11 @@ public class LoginTest extends BaseTest {
     public void userShouldLogOutSuccessfully(){
         //find username element & send values
         WebElement userName = driver.findElement(By.name("username"));
-        userName.sendKeys("Harsha11");
+        userName.sendKeys("Sweety");
 
         //find password element & send values
         WebElement password = driver.findElement(By.name("password"));
-        password.sendKeys("harsha@2");
+        password.sendKeys("sweety@2");
 
         //find login button & click on it
         WebElement loginButton = driver.findElement(By.xpath("//input[@value='Log In']"));

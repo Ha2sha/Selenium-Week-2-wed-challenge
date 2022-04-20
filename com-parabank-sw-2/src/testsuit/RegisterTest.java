@@ -41,7 +41,7 @@ public class RegisterTest extends BaseTest {
 
         //finding firstname element & sending values
         WebElement firstName=driver.findElement(By.id("customer.firstName"));
-        firstName.sendKeys("Harsha");
+        firstName.sendKeys("Sweety");
 
         //finding lastName element & sending values
         WebElement lastName=driver.findElement(By.id("customer.lastName"));
@@ -73,15 +73,15 @@ public class RegisterTest extends BaseTest {
 
         //finding UserName element & sending values
         WebElement userName=driver.findElement(By.id("customer.username"));
-        userName.sendKeys("harsha11");
+        userName.sendKeys("Sweety");
 
         //finding password element & sending values
         WebElement password=driver.findElement(By.id("customer.password"));
-        password.sendKeys("harsha@2");
+        password.sendKeys("sweety@2");
 
         //finding password element & sending values
         WebElement confirmPassword=driver.findElement(By.id("repeatedPassword"));
-        confirmPassword.sendKeys("harsha@2");
+        confirmPassword.sendKeys("sweety@2");
 
         //finding password element & Click on it
         WebElement registerButton=driver.findElement(By.xpath("//input[@value='Register']"));
@@ -102,6 +102,6 @@ public class RegisterTest extends BaseTest {
     @After
     public void teraDown(){
 
-        //closeBrowser();
+        closeBrowser();
     }
 }
