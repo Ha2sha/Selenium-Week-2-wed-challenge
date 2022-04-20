@@ -43,6 +43,12 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void verifyTheErrorMessage() {
+        //reset the database
+        WebElement adminPage=driver.findElement(By.linkText("Admin Page"));
+        adminPage.click();
+        WebElement resetButton=driver.findElement(By.xpath("//button[contains(text(),'Clean')]"));
+        resetButton.click();
+
         //find username element & send values
         WebElement userName = driver.findElement(By.name("username"));
         userName.sendKeys("___");
@@ -56,10 +62,10 @@ public class LoginTest extends BaseTest {
         loginButton.click();
 
         //requirement
-        String expectedText = "The username and password could not be verified";
+        String expectedText = "The username and password could not be verified.";
 
         //find actualText element & get text
-        WebElement actualTextElement = driver.findElement(By.xpath("//h1[contains(text(),'Accounts Overview')]"));
+        WebElement actualTextElement = driver.findElement(By.xpath("//p[contains(text(),'The username and password could not be verified.')]"));
         String actualText = actualTextElement.getText();
 
         //validating expected & actual texts
@@ -98,6 +104,6 @@ public class LoginTest extends BaseTest {
 
     @After
     public void teraDown() {
-        //closeBrowser();
+        closeBrowser();
     }
 }
